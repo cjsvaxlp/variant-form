@@ -1,38 +1,3 @@
-# Variant Form
-#### 一款高效的Vue低代码表单，可视化设计，一键生成源码，享受更多摸鱼时间。
-
-![image](https://ks3-cn-beijing.ksyuncs.com/vform-static/img/vform_demo.gif)
-
-<br/>
-
-### 立即体验
-[在线Demo](http://120.92.142.115/)
-
-
-### 🎉🎉<mark>基于VForm的全栈低代码平台已发布</mark>🎉🎉
-
-[美乐低代码——立即进入](https://melecode.com/) （私有部署、开箱即用️，已开源✌✌）️
-
-
-### 立即体验VForm Pro高级版（提供商业支持）
-[Pro Demo](https://www.vform666.com/pro/)
-
-### 视频教程集合：
-[B站观看](https://space.bilibili.com/626932375)
-
-### Vue 3正式版已发布
-[立即进入](https://gitee.com/vdpadmin/variant-form3-vite)
-
-### 🎉🎉基于Vant组件库的Mobile版本已发布🎉🎉
-[立即进入](https://vform666.com/vform-mobile.html)
-
-
-### 友情链接
-
-[Fantastic-admin](https://hooray.gitee.io/fantastic-admin/) —— 一款开箱即用的 Vue 中后台管理系统框架（支持Vue2/Vue3）
-
-
-<br/>
 
 ### 功能一览
 ```
@@ -177,25 +142,3 @@ body {
 </script>
 ```
 
-<br/>
-
-### 资源链接
-<hr>
-
-文档官网：<a href="https://www.vform666.com/" target="_blank">https://www.vform666.com/</a>
-
-在线演示：<a href="http://120.92.142.115/" target="_blank">http://120.92.142.115/</a>
-
-Gitee仓库：<a href="https://gitee.com/vdpadmin/variant-form" target="_blank">https://gitee.com/vdpadmin/variant-form</a>
-
-Github仓库：<a href="https://github.com/vform666/variant-form" target="_blank">https://github.com/vform666/variant-form</a>
-
-VS Code插件：<a href="https://www.vform666.com/plugin/" target="_blank">https://www.vform666.com/plugin/</a>
-
-更新日志：<a href="https://www.vform666.com/changelog.html" target="_blank">https://www.vform666.com/changelog.html</a>
-
-订阅Pro版：<a href="https://www.vform666.com/pro/" target="_blank">https://www.vform666.com/pro/</a>
-
-技术交流群：扫如下二维码加群
-
-![image](https://vform2022.ks3-cn-beijing.ksyuncs.com/vchat_qrcode.png)

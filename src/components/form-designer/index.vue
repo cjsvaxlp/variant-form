@@ -1,13 +1,3 @@
-<!--
-/**
- * author: vformAdmin
- * email: vdpadmin@163.com
- * website: https://www.vform666.com
- * date: 2021.08.18
- * remark: 如果要分发VForm源码，需在本文件顶部保留此文件头信息！！
- */
--->
-
 <template>
   <el-container class="main-container full-height">
     <el-header class="main-header">
@@ -22,11 +12,12 @@
             <el-dropdown-item command="en-US">{{i18nt('application.en-US')}}</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <a v-if="showLink('externalLink')" href="javascript:void(0)" @click="(ev) => openUrl(ev, gitUrl)" target="_blank"><svg-icon icon-class="github" />{{i18nt('application.github')}}</a>
+<!--        <a v-if="showLink('externalLink')" href="javascript:void(0)" @click="(ev) => openUrl(ev, gitUrl)" target="_blank"><svg-icon icon-class="github" />{{i18nt('application.github')}}</a>
         <a v-if="showLink('externalLink')" href="javascript:void(0)" @click="(ev) => openUrl(ev, docUrl)" target="_blank"><svg-icon icon-class="document" />{{i18nt('application.document')}}</a>
         <a v-if="showLink('externalLink')" href="javascript:void(0)" @click="(ev) => openUrl(ev, chatUrl)" target="_blank">{{i18nt('application.qqGroup')}}</a>
         <a v-if="showLink('externalLink')" href="javascript:void(0)" @click="(ev) => openUrl(ev, subScribeUrl)" target="_blank">
-          {{i18nt('application.subscription')}}<i class="el-icon-top-right"></i></a>
+          {{i18nt('application.subscription')}}<i class="el-icon-top-right"></i>
+        </a>-->
       </div>
     </el-header>
 
@@ -190,7 +181,7 @@
       },
 
       openHome() {
-        if (!!this.vsCodeFlag) {
+        if (this.vsCodeFlag) {
           const msgObj = {
             cmd: 'openUrl',
             data: {
@@ -202,7 +193,7 @@
       },
 
       openUrl(event, url) {
-        if (!!this.vsCodeFlag) {
+        if (this.vsCodeFlag) {
           const msgObj = {
             cmd: 'openUrl',
             data: {
@@ -223,7 +214,7 @@
         }
 
         axios.get(MOCK_CASE_URL + this.caseName + '.txt').then(res => {
-          if (!!res.data.code) {
+          if (res.data.code) {
             this.$message.error(this.i18nt('designer.hint.sampleLoadedFail'))
             return
           }
@@ -237,7 +228,7 @@
 
       initLocale() {
         let curLocale = localStorage.getItem('v_form_locale')
-        if (!!this.vsCodeFlag) {
+        if (this.vsCodeFlag) {
           curLocale = curLocale || 'en-US'
         } else {
           curLocale = curLocale || 'zh-CN'
@@ -279,7 +270,7 @@
 
       setFormJson(formJson) {
         let modifiedFlag = false
-        if (!!formJson) {
+        if (formJson) {
           if (typeof formJson === 'string') {
             modifiedFlag = this.designer.loadFormJson( JSON.parse(formJson) )
           } else if (formJson.constructor === Object) {
@@ -355,7 +346,7 @@
        * @returns {*[]}
        */
       getFieldWidgets(widgetList = null) {
-        return !!widgetList ? getAllFieldWidgets(widgetList) : getAllFieldWidgets(this.designer.widgetList)
+        return widgetList ? getAllFieldWidgets(widgetList) : getAllFieldWidgets(this.designer.widgetList)
       },
 
       /**
@@ -363,7 +354,7 @@
        * @returns {*[]}
        */
       getContainerWidgets(widgetList = null) {
-        return !!widgetList ? getAllContainerWidgets(widgetList) : getAllContainerWidgets(this.designer.widgetList)
+        return widgetList ? getAllContainerWidgets(widgetList) : getAllContainerWidgets(this.designer.widgetList)
       },
 
       /**
